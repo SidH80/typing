@@ -7,16 +7,16 @@ import { lorem } from 'faker';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  randomText = '';
+  randomText = lorem.sentence();
+  enteredText = '';
   success = false;
   constructor() { }
 
   ngOnInit() {
-    this.randomText = lorem.sentence()
   }
 
-  onTypingChallenge(input) {
-    console.log(input)
+  onTypingChallenge(input: string) {
+    this.enteredText = input;
   }
 
 }

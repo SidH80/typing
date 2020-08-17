@@ -8,7 +8,7 @@
       <div class="field">
         <input class="input" (input)="onTypingChallenge($event.target.value)" />
       </div>
-      <div class="box has-text-centered">
+      <div *ngIf="randomText === enteredText" class="box has-text-centered">
         <h2 class="title">
           You Win!
         </h2>
