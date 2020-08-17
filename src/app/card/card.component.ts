@@ -19,4 +19,12 @@ export class CardComponent implements OnInit {
     this.enteredText = input;
   }
 
+  compareLetter(randomLetter: string, enteredLetter: string) {
+    if (!enteredLetter) {
+      return 'pending';
+    }
+
+    return randomLetter === enteredLetter ? 'correct' : 'incorrect'
+  }
+
 }
